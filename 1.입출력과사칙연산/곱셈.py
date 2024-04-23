@@ -1,0 +1,11 @@
+A=int(input())
+B=str(input())
+
+num1 = A*int(B[2])
+num2 = A*int(B[1])
+num3 = A*int(B[0])
+num4 = A*int(B)
+print(num1)
+print(num2)
+print(num3)
+print(num4)
