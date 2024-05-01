@@ -12,7 +12,3 @@ for _ in range(m):
     lst=basket[i-1:j]
     basket[i-1:j]=lst[::-1]
 print(*basket)
-    
-
-        
-    
