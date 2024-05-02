@@ -11,7 +11,3 @@ for _ in range(t):
     for i in s:
         string+=int(r)*str(i)
     print(string)
-        
-
-
-        
