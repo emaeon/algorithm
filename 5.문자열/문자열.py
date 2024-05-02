@@ -1,7 +1,10 @@
 import sys
 
-input = sys.stdin.readline
+input=sys.stdin.readline
 
-string = input().rstrip()
+t=int(input().rstrip())
 
-print(len(string))
+for _ in range(t):
+    
+    string=input().rstrip()
+    print(string[0]+string[-1])
