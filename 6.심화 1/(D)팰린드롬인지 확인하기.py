@@ -2,7 +2,7 @@ import sys
 
 input=sys.stdin.readline
 
-#팰린드롬 앞으로 읽을떄와 거꾸로 읽을 떄 똑같은 단어
+#팰린드롬 앞으로 읽을 때와 거꾸로 읽을 떄 똑같은 단어
 
 string = input().rstrip()
 
