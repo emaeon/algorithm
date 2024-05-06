@@ -2,9 +2,6 @@ import sys
 
 input = sys.stdin.readline
 
-#
-#문자열에서 크로아티아 알파벳 탐색
-# 뽑은 문자의 다음 탐색
 alpha = input().rstrip()
 
 lst = ['c=','c-','dz=','d-','lj','nj','s=','z=']
