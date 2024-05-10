@@ -15,6 +15,3 @@ for i in range(len(N)):
         result+=(num_lst[alpha_lst.index(N[::-1][i])])*(int(B)**i)
 
 print(result)
-    
-
-# print((35*(36**4))+(35*(36**3))+(35*(36**2))+(35*(36**1))+(35*(36**0)))
