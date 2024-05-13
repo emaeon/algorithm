@@ -13,4 +13,3 @@ for _ in range(t):
         temp_lst.append(price//i)
         price = price%i
     print(*temp_lst)
-    
