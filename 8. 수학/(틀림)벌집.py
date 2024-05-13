@@ -8,11 +8,15 @@ import sys
 
 input=sys.stdin.readline
 t=int(input().rstrip())
-cnt = 1
-nums = 1
 
-while t > nums :
-    nums += 6 * cnt
-    cnt += 1
+nums = 1 #벌집개수
+cnt = 1 #카운트(칸)
+
+while t > nums : #만약 입력한 값이 벌집 개수 보다 작은 경우에 멈춤 
+    
+    nums += 6 * cnt # 6의 배수만큼 한칸씩 이동
+    cnt += 1 # 반복문 한번 돌때마다 카운트 증가
+    
+#7 -> 
 print(cnt)
     
