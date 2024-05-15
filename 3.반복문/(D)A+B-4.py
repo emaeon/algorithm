@@ -1,16 +1,13 @@
 import sys
 
-input = sys.stdin.readline
+input=sys.stdin.readline
 
 while True:
-   a,b=map(int,input().split())
-   
-   if a==0 and b==0 :
-      # print(0)
-      break
-   
-   else :   
+   try:
+      a,b=map(int,input().split())
+      
       c=a+b
+      
       print(c)
-   
-   
+   except:
+      break

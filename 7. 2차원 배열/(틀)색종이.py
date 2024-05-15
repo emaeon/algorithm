@@ -20,7 +20,6 @@ for i in arr:
 
 print(result)
 
-
 # import sys
 
 # input=sys.stdin.readline

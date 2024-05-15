@@ -11,5 +11,5 @@ for i in range(n):
     if lst[i] < x:
         answer.append(lst[i])
         
-print(answer)
+print(*answer) # 요소 한줄에 한번에 출력
         
