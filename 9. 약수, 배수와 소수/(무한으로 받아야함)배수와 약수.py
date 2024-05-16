@@ -2,21 +2,22 @@ import sys
 
 input = sys.stdin.readline
 
-a,b = map(int,input().split())
+
 
 while True:
+    a,b = map(int,input().split())
     try:
-        if (b/a).is_integer() :
+        if b % a ==0 :
             print('factor')
-            break
-        elif (a/b).is_integer() :
+
+        elif a % b == 0:
             print('multiple')
-            break
+
         elif a== 0 and b == 0:
             break
         else:
             print('neither')
-            break
+
         
     except:
         break
