@@ -4,4 +4,4 @@ input = sys.stdin.readline
 
 a=int(input().rstrip())
 print(a)
-print(1)``
+print(1)
