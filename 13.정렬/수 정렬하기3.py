@@ -11,3 +11,5 @@ for _ in range(n):
     
 
 print(*sorted(lst),sep='\n')
+
+틀림
