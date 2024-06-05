@@ -2,14 +2,14 @@ import sys
 
 input = sys.stdin.readline
 
-n = int(input().rstrip())
+lst = [0]*10001
 
-lst = []
+n = int(input())
+
 for _ in range(n):
-    a=int(input().rstrip())
-    lst.append(a)
+    lst[int(input())] +=1
     
-
-print(*sorted(lst),sep='\n')
-
-틀림
+for i in range(10000):
+    if lst[i] != 0 :
+        for _ in range(lst[i]):
+            print(i)
