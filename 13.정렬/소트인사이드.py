@@ -2,6 +2,6 @@ import sys
 
 input = sys.stdin.readline
 
-a = list(str(input().rstrip()))
+n =input().rstrip()
 
-print(*sorted(a, reverse=True), sep='')
+print(*sorted(n,reverse=True),sep='')
