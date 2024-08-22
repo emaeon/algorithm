@@ -29,8 +29,3 @@ for _ in range(n):
         
         if cnt1 == cnt2:
             print('YES')
-
-            
-        
-                
-
