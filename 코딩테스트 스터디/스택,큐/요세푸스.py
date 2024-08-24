@@ -5,8 +5,7 @@ queue = deque()
 input = sys.stdin.readline
 n,k = map(int, input().split())
 
-for i in range(n): # 1번부터 N번까지 N명의 사람
-    queue.append(i+1)
+queue = deque([i+1 for i in range(n)])
 
 result=[]
 while queue : #큐 안에 사람들 모두 사라질 때까지 반복
