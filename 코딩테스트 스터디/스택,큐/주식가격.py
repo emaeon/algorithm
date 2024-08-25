@@ -1,15 +1,17 @@
+from collections import deque
 def solution(prices):
-    length = len(prices)
-    answer = [ i for i in range (length - 1, -1, -1)]
+    answer = []
+    queue = deque(prices)
     
-    stack = [0]
-    for i in range (1, length, 1):
-        while stack and prices[stack[-1]] > prices[i]:
-            j = stack.pop()
-            answer[j] = i - j
-        stack.append(i)
+    while queue :
+        cnt = 0
+        word = queue.popleft()
+        
+        for i in queue :
+            cnt+=1
+            if word <= i:
+                pass
+            else:
+                break
+        answer.append(cnt)
     return answer
-
-inp=input()
-a = solution(inp)
-print(a)
