@@ -31,7 +31,7 @@ n, m, v = map(int, input().split())
 
 #1. graph 및 visited 배열 선언
 graph=[[False]*(n+1) for _ in range(n+1)]
-
+dd
 for _ in range(m):
     a, b = map(int,input().split())
     graph[a][b] = True
