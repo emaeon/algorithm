@@ -12,14 +12,14 @@ def bfs(graph, a, b):
     count = 1
 
     while queue:
-        x, y = queue.poplef`t()
+        x, y = queue.popleft()
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
             if nx < 0 or nx >= n or ny < 0 or ny >= n:
                 continue
             if graph[nx][ny] == 1:
-                graph[nx][ny] = 0
+                graph[nx][ny] = 0``
                 queue.append((nx, ny))
                 count += 1
     return count
