@@ -19,7 +19,7 @@ def bfs(graph, a, b):
             if nx < 0 or nx >= n or ny < 0 or ny >= n:
                 continue
             if graph[nx][ny] == 1:
-                graph[nx][ny] = 0``
+                graph[nx][ny] = 0
                 queue.append((nx, ny))
                 count += 1
     return count
