@@ -1,47 +1,44 @@
 import sys
 from collections import deque
-
-
-def dfs(idx):
-    global visited
-    visited[idx] = True
-    print(idx, end=' ')
-    
-    for i in range(1, n+1):
-        if not visited[i] and graph[idx][i]:
-            dfs(i)
-
-def bfs():
-    global queue, visited
-    while queue :
-        cur = queue.popleft()
-        visited[cur] = True
-        print(cur, end=' ')
-        
-        for i in range(1, n+1):
-            if not visited[i] and graph[cur][i]:
-                visited[i] = True
-                queue.append(i)
-            
-    
-#0. input 받기
 input = sys.stdin.readline
-n, m, v = map(int, input().split())
+
+dx = [-1,1,0,0]
+dy = [0,0,-1,1]
+
+def bfs(graph,a,b):
+    q = deque()
+    q.append((a,b))
+    graph[a][b] = 0
+
+    while q :
+        x,y = q.popleft()
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            
+            if nx < 0 or nx >= m or ny < 0 or ny >= n :
+                continue
+            if graph[nx][ny] == 1:
+                graph[nx][ny] = 0
+                q.append((nx,ny))
 
 
-#1. graph 및 visited 배열 선언
-graph=[[False]*(n+1) for _ in range(n+1)]
+t = int(input().rstrip())
+            
+for _ in range(t):
+    m, n, k = map(int,input().split())
+    
+    graph = [[0]*(n) for _ in range(m)]
 
-for _ in range(m):
-    a, b = map(int,input().split())
-    graph[a][b] = True
-    graph[b][a] = True
-# print(graph)
-visited= [False]*(n+1)
-
-dfs(v)
-print()
-
-visited = [False]*(n+1)
-queue = deque([v])
-bfs()
+    for i in range(k):
+        a,b = map(int,input().split())
+        graph[a][b] = 1
+    
+    count = 0        
+    for j in range(m):
+        for k in range(n):
+            if graph[j][k] == 1:
+                bfs(graph,j,k)
+                count +=1
+            
+    print(count)
