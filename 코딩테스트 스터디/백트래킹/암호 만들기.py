@@ -8,15 +8,15 @@ def back_tracking(cnt, idx):
         # 모음, 자음 체크
         vo, co = 0, 0
 
-        for i in range(l):
-            if answer[i] in consonant:
-                vo += 1
+        for i in range(l): # 
+            if answer[i] in consonant: #모음이 있으면
+                vo += 1 # 모음 추가
             else:
-                co += 1
+                co += 1 # 자음 추가
 
         # 모음 1개 이상, 자음 2개 이상
         if vo >= 1 and co >= 2:
-            print("".join(answer))
+            print("".join(answer)) # 출력
 
         return
 
