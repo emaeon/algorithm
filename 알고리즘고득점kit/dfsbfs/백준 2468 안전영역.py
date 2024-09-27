@@ -1,13 +1,7 @@
 import sys
 from collections import deque
 input = sys.stdin.readline
-arr = [
-    [1, 2, 3],
-    [7, 5, 6],
-    [4, 8, 9]
-]
 
-print(max(arr))
 n = int(input().rstrip())
 arr = []
 for _ in range(n) :
