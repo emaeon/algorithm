@@ -3,8 +3,8 @@ import math
 
 input = sys.stdin.readline
 n = int(input().rstrip())
-
 # 규칙 : 2*2 -> 3*3 -> 5*5 -> 9*9 즉, n + (n-1)
+
 first = 3
 if n >= 2:
 
