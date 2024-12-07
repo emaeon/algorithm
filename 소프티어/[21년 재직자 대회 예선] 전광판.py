@@ -12,6 +12,7 @@ for _ in range(t) :
     lst_a,lst_b = list(a), list(b)
     cnt = 0
 
+    #after 숫자의 자리수가 더 많은 경우
     if len(lst_a) < len(lst_b) :
         temp = len(lst_b) - len(lst_a)
         while temp:  # 우선 바뀔숫자가 더 많다면 그만큼 b를 제거
@@ -30,7 +31,7 @@ for _ in range(t) :
                 else:
                     pass
         print(cnt)
-
+    # before 숫자의 자리수가 더 많은 경우
     elif len(lst_a) > len(lst_b):
         temp = len(lst_a) - len(lst_b)
 
@@ -50,7 +51,7 @@ for _ in range(t) :
                 else:
                     pass
         print(cnt)
-
+    # 숫자 자리수가 동일한 경우
     else:
 
         for i in range(len(lst_a)):
