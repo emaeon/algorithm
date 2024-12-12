@@ -14,26 +14,27 @@ cnt += 1
 
 def find_count_to_turn_out_to_all_zero_or_all_one(string):
     # 이 부분을 채워보세요!
-
     n = len(string)-1
     lst = list(map(int,string.rstrip()))
 
-    answer = 0
-    popnumber = lst.pop(0)
-    range_inference=0
+    one_cnt = 0
+    zero_cnt = 0
+
+    if lst[0] == 0 :
+        one_cnt += 1
+    else:
+        zero_cnt += 1
+
     while n :
         temp = lst.pop(0)
-        if popnumber != temp :
-            if len(lst) == 0:
-                answer += 1
-            popnumber = temp
-            range_inference += 1
-
-        if range_inference == 2:
-            answer +=1
-            range_inference=0
+        if lst[0] != temp :
+            if lst[0] == 1 :
+                zero_cnt += 1
+            else:
+                one_cnt += 1
         n -=1
-    return answer
+
+    return min(one_cnt,zero_cnt)
 
 result = find_count_to_turn_out_to_all_zero_or_all_one(string)
 print(result)
